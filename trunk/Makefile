@@ -20,7 +20,7 @@ OBJS_NS_CPP = $(SRC_NS_CPP:%.cc=%-ns.o)
 
 KERNEL=$(shell uname -r)
 # Change to compile against different kernel (can be overridden):
-KERNEL_DIR=/lib/modules/$(KERNEL)/build
+KERNEL_DIR=/lib/modules/2.6.24.4/build
 KERNEL_INC=$(KERNEL_DIR)/include
 
 # Compiler and options:
@@ -28,7 +28,7 @@ KERNEL_INC=$(KERNEL_DIR)/include
 CC=gcc
 LD=ld
 ARM_CC=arm-linux-gcc
-ARM_CCFLAGS=-mbig-endian
+# ARM_CCFLAGS=-mbig-endian
 ARM_LD=arm-linux-ld
 MIPS_CC=mipsel-linux-gcc
 MIPS_LD=mipsel-linux-ld
